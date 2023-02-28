@@ -1430,4 +1430,26 @@ extension StyledWidget on Widget {
         opaque: opaque,
         child: this,
       );
+
+  Widget visibility({
+    Key? key,
+    bool visible = true,
+    Widget replacement = const SizedBox.shrink(),
+    bool maintainState = false,
+    bool maintainAnimation = false,
+    bool maintainSize = false,
+    bool maintainSemantics = false,
+    bool maintainInteractivity = false,
+  }) =>
+      Visibility(
+        key: key,
+        replacement: replacement,
+        visible: visible,
+        maintainState: maintainState,
+        maintainAnimation: maintainAnimation,
+        maintainSize: maintainSize,
+        maintainSemantics: maintainSemantics,
+        maintainInteractivity: maintainInteractivity,
+        child: this,
+      );
 }
