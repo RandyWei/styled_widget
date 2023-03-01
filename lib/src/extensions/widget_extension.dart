@@ -1452,4 +1452,56 @@ extension StyledWidget on Widget {
         maintainInteractivity: maintainInteractivity,
         child: this,
       );
+
+  ///
+  /// InkWell onTap
+  ///  - onDown -> onTapDown
+  ///  - onUp -> onTapUp
+  ///  - onCancel -> onTapCancel
+  ///
+  Widget onTap(
+    GestureTapCallback? onTap, {
+    Key? key,
+    GestureTapDownCallback? onDown,
+    GestureTapUpCallback? onUp,
+    GestureTapCallback? onCancel,
+    double? radius,
+    BorderRadius? borderRadius,
+    ShapeBorder? customBorder,
+    Color? focusColor,
+    Color? hoverColor,
+    Color? highlightColor,
+    MaterialStateProperty<Color?>? overlayColor,
+    Color? splashColor,
+    InteractiveInkFeatureFactory? splashFactory,
+    bool enableFeedback = true,
+    bool excludeFromSemantics = false,
+    FocusNode? focusNode,
+    bool canRequestFocus = true,
+    bool autofocus = false,
+    MaterialStatesController? statesController,
+  }) =>
+      InkWell(
+        key: key,
+        onTap: onTap,
+        onTapDown: onDown,
+        onTapUp: onUp,
+        onTapCancel: onCancel,
+        radius: radius,
+        borderRadius: borderRadius,
+        customBorder: customBorder,
+        focusColor: focusColor,
+        hoverColor: hoverColor,
+        highlightColor: highlightColor,
+        overlayColor: overlayColor,
+        splashColor: splashColor,
+        splashFactory: splashFactory,
+        enableFeedback: enableFeedback,
+        excludeFromSemantics: excludeFromSemantics,
+        focusNode: focusNode,
+        canRequestFocus: canRequestFocus,
+        autofocus: autofocus,
+        statesController: statesController,
+        child: this,
+      );
 }
